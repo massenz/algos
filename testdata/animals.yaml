@@ -1,0 +1,24 @@
+# Simple animal kingdom graph
+
+# Directed graphs MUST list ALL edges, and MAY have a root
+kind: directed
+root: animals
+vertices:
+  animals:
+    - mammals
+    - birds
+    - fish
+  mammals:
+    - humans
+    - dogs
+    - cats
+  birds:
+    - eagles
+    - sparrows
+  fish:
+    - sharks
+    - salmon
+  dogs:
+    - poodles
+    - labradors
+    - spaniels

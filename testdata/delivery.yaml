@@ -1,0 +1,15 @@
+# A Directed graph with a cycle
+
+kind: directed
+root: sent
+vertices:
+  sent:
+    - shipped
+    - lost
+  shipped:
+    - delivered
+    - lost
+  delivered:
+    - refused
+  refused:
+    - shipped

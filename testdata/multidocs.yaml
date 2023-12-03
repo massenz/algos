@@ -1,0 +1,34 @@
+# Simple animal kingdom graph
+
+# Directed graphs MUST list ALL edges, and MAY have a root
+kind: directed
+root: main
+vertices:
+  main:
+    - server
+    - parser
+    - api
+  server:
+    - handlers
+    - middleware
+  api:
+    - forks
+    - sparrows
+  parser:
+    - syntax
+    - words
+---
+# Undirected graphs do not need to list ALL edges
+kind: undirected
+vertices:
+  foo:
+    - bar
+    - baz
+    - wat
+  bar:
+    - voot
+    - wat
+  wat:
+    - foo
+  baz:
+    - voot

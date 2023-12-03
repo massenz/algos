@@ -1,0 +1,16 @@
+# Simple cyclic graph
+
+# Undirected graphs do not need to list ALL edges and MAY have cycles.
+kind: undirected
+vertices:
+  foo:
+    - bar
+    - baz
+    - wat
+  bar:
+    - voot
+    - wat
+  wat:
+    - foo
+  baz:
+    - voot
