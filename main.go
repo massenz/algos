@@ -5,10 +5,11 @@
 package main
 
 import (
-	. "algorithms/graph"
 	"flag"
 	"fmt"
 	"os"
+
+	. "github.com/massenz/algos/graph"
 )
 
 func main() {

@@ -5,12 +5,13 @@
 package graph
 
 import (
-	"algorithms/common"
 	"fmt"
 	"os"
 	"strings"
 
 	"gopkg.in/yaml.v2"
+
+	"github.com/massenz/algos/common"
 )
 
 type Node struct {
@@ -140,6 +141,8 @@ func (g *Graph) BFS(start string, visit func(*Node)) {
 
 // LoadGraphs loads multiple graphs from a YAML file containing multiple adjacency lists.
 // If your YAML file contains multiple documents, you must separate them with `---`.
+// It returns a slice of Graphs and a slice of root node names; some of the root names
+// may be empty, in which case the caller must specify a start node for the traversal.
 func LoadGraphs(filepath string) ([]*Graph, []string, error) {
 	// Read the YAML file
 	var graphs []*Graph

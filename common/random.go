@@ -11,8 +11,8 @@ import (
 	"slices"
 )
 
-// GenRandInts generates N random integers with a given distribution
-func GenRandInts(n int, distribution func() int) []int {
+// GenRndInts generates N random integers with a given distribution
+func GenRndInts(n int, distribution func() int) []int {
 	randomIntegers := make([]int, n)
 	for i := 0; i < n; i++ {
 		randomIntegers[i] = distribution()
@@ -26,7 +26,7 @@ func PrintRandLogs(n int) {
 		return rand.Intn(n) // Adjust the range as needed
 	}
 
-	randomIntegers := GenRandInts(n, uniformDistribution)
+	randomIntegers := GenRndInts(n, uniformDistribution)
 	slices.Sort(randomIntegers)
 	// Print the log of the generated random integers
 	fmt.Println("Sorted Log of Random Integers:")
